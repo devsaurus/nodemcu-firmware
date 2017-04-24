@@ -22,6 +22,7 @@ site_favicon: img/favicon.png
 
 pages:
 - Overview: 'index.md'
+- Start: 'en/start.md'
 - English:
     - Home: 'en/index.md'
     - Building the firmware: 'en/build.md'
