@@ -2,6 +2,10 @@ sdk/
 cache/
 user_config.h
 server-ca.crt
+sdkconfig
+sdkconfig.old*
+build/
+components/*/.output/
 
 #ignore Eclipse project files
 .cproject
