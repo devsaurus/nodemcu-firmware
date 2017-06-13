@@ -4,7 +4,7 @@
 # the module. See components/core/include/module.h for further details on
 # how this works.
 -include $(PROJECT_PATH)/build/include/config/auto.conf
-include $(PROJECT_PATH)/components/modules/uppercase.mk
+include $(COMPONENT_PATH)/uppercase.mk
 
 ifneq (4.0, $(firstword $(sort $(MAKE_VERSION) 4.0)))
   # make versions below 4.0 will fail on the uppercase function used in
@@ -27,7 +27,7 @@ COMPONENT_EXTRA_CLEAN := u8g2_fonts.h u8g2_displays.h
 u8g2.o: u8g2_fonts.h u8g2_displays.h
 
 u8g2_fonts.h: $(BUILD_DIR_BASE)/include/sdkconfig.h
-	perl -w $(PROJECT_PATH)/tools/u8g2_config_fonts.pl < $^ > $@
+	perl -w $(PROJECT_PATH)/tools_esp32/u8g2_config_fonts.pl < $^ > $@
 
 u8g2_displays.h: $(BUILD_DIR_BASE)/include/sdkconfig.h
-	perl -w $(PROJECT_PATH)/tools/u8g2_config_displays.pl < $^ > $@
+	perl -w $(PROJECT_PATH)/tools_esp32/u8g2_config_displays.pl < $^ > $@
