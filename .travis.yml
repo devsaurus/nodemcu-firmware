@@ -16,8 +16,7 @@ before_install:
 - source env/bin/activate
 - luarocks install luafilesystem
 install:
-- tar -Jxvf tools/esp-open-sdk.tar.xz
-- export PATH=$PATH:$PWD/esp-open-sdk/xtensa-lx106-elf/bin
+- export PATH=$PATH:$PWD/tools/toolchains/esp8266/bin
 script:
 - lua tools/cross-lua.lua || exit 1
 - export BUILD_DATE=$(date +%Y%m%d)

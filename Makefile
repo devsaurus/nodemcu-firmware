@@ -230,7 +230,7 @@ $(TOP_DIR)/cache/esp_iot_sdk_v$(SDK_PATCH_VER).zip:
 clean:
 	$(foreach d, $(SUBDIRS), $(MAKE) -C $(d) clean;)
 	$(RM) -r $(ODIR)/$(TARGET)/$(FLAVOR)
-	$(RM) -r "$(TOP_DIR)/esp_iot_sdk_v$(SDK_VER)"
+	$(RM) -r "$(TOP_DIR)/sdk/esp_iot_sdk_v$(SDK_VER)"
 	$(RM) -r "$(TOP_DIR)/sdk/.extracted-$(SDK_BASE_VER)"
 	$(RM) -r "$(TOP_DIR)/sdk/.patched-$(SDK_VER)"
 
